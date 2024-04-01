@@ -1,18 +1,20 @@
 {
-	"extends": "wikimedia",
-	"env": {
-		"browser": true,
-		"jquery": true
-	},
+	"root": true,
+	"extends": [
+		"wikimedia/client-es6",
+		"wikimedia/mediawiki",
+		"wikimedia/jquery"
+	],
 	"globals": {
-		"mediaWiki": false,
-		"OO": false,
-        "module": false
+		"OO": false
 	},
-    "parserOptions": {
-        "ecmaVersion": 6
-	},
-	"ignorePatterns": ["resources/js/dist"],
+	"ignorePatterns": [ "resources/js/dist" ],
 	"rules": {
+		"no-var": "off",
+		"prefer-const": "off",
+		"no-jquery/no-global-selector": "warn",
+		"no-jquery/no-parse-html-literal": "warn",
+		"no-jquery/no-ready-shorthand": "warn",
+		"no-jquery/variable-pattern": "warn"
 	}
 }

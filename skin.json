@@ -1,72 +1,72 @@
 {
-    "name": "2018",
-    "version": "0.1",
-    "author": "Morag S.",
-    "url": "https://www.mediawiki.org/wiki/Skin:2018",
-    "descriptionmsg": "2018-desc",
-    "namemsg": "skinname-2018",
-    "license-name": "MIT",
-    "type": "skin",
-    "requires": {
-        "MediaWiki": ">= 1.41.0"
-    },
-    "ValidSkinNames": {
-        "s2018": {
-            "class": "Skin2018",
-            "args": [
-                {
-                    "name": "2018",
-                    "responsive": true,
-                    "bodyOnly": true,
-                    "styles": [
-                        "skins.2018"
-                    ],
-                    "scripts": [
-                        "skins.2018.js"
-                    ]
-                }
-            ]
-        }
-    },
-    "MessagesDirs": {
-        "2018": [
-            "i18n"
-        ]
-    },
-    "ResourceModules": {
-        "skins.2018": {
+	"name": "2018",
+	"version": "0.1",
+	"author": "Morag S.",
+	"url": "https://www.mediawiki.org/wiki/Skin:2018",
+	"descriptionmsg": "2018-desc",
+	"namemsg": "skinname-2018",
+	"license-name": "MIT",
+	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.41.0"
+	},
+	"ValidSkinNames": {
+		"s2018": {
+			"class": "Skin2018",
+			"args": [
+				{
+					"name": "2018",
+					"responsive": true,
+					"bodyOnly": true,
+					"styles": [
+						"skins.2018"
+					],
+					"scripts": [
+						"skins.2018.js"
+					]
+				}
+			]
+		}
+	},
+	"MessagesDirs": {
+		"2018": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"skins.2018": {
 			"class": "MediaWiki\\ResourceLoader\\SkinModule",
-            "features": {
-                "content-links": true,
-                "content-links-external": true
-            },
-            "styles": {
-                "resources/less/styles.less": {
-                    "media": "screen"
-                },
-                "resources/less/print.less": {
-                    "media": "print"
-                }
-            }
-        },
-        "skins.2018.js": {
-            "scripts": [
-                "node_modules/unpoly/unpoly.es5.js",
-                "node_modules/uikit/dist/js/uikit.js",
-                "node_modules/uikit/dist/js/uikit-icons.js",
-                "node_modules/clipboard/dist/clipboard.js",
-                "node_modules/mermaid/dist/mermaid.js",
-                "resources/js/dist/contentTransformation.js"
-            ]
-        }
-    },
-    "ResourceFileModulePaths": {
-        "localBasePath": "",
-        "remoteSkinPath": "2018"
-    },
-    "AutoloadClasses": {
-        "Skin2018": "includes/Skin2018.php",
-        "Skin2018Template": "includes/Skin2018Template.php"
-    },
-    "manifest_version": 2
+			"features": {
+				"content-links": true,
+				"content-links-external": true
+			},
+			"styles": {
+				"resources/less/styles.less": {
+					"media": "screen"
+				},
+				"resources/less/print.less": {
+					"media": "print"
+				}
+			}
+		},
+		"skins.2018.js": {
+			"scripts": [
+				"node_modules/unpoly/unpoly.es5.js",
+				"node_modules/uikit/dist/js/uikit.js",
+				"node_modules/uikit/dist/js/uikit-icons.js",
+				"node_modules/clipboard/dist/clipboard.js",
+				"node_modules/mermaid/dist/mermaid.js",
+				"resources/js/dist/contentTransformation.js"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "2018"
+	},
+	"AutoloadClasses": {
+		"Skin2018": "includes/Skin2018.php",
+		"Skin2018Template": "includes/Skin2018Template.php"
+	},
+	"manifest_version": 2
 }
