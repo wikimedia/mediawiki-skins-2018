@@ -4,6 +4,7 @@
 		<exclude name="Generic.Files.LineLength.TooLong" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamName" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamTag" />
+		<exclude name="MediaWiki.Commenting.PropertyDocumentation.MissingDocumentationPublic" />
 		<exclude name="Squiz.Scope.MethodScope.Missing" />
 	</rule>
 	<file>.</file>
