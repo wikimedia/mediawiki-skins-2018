@@ -5,10 +5,9 @@
 		"wikimedia/mediawiki",
 		"wikimedia/jquery"
 	],
-	"globals": {
-		"OO": false
-	},
-	"ignorePatterns": [ "resources/js/dist" ],
+	"ignorePatterns": [
+		"resources/js/dist"
+	],
 	"rules": {
 		"no-var": "off",
 		"prefer-const": "off",
