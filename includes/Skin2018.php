@@ -5,6 +5,8 @@
  * @ingroup Skins
  */
 class Skin2018 extends SkinTemplate {
+	/** @inheritDoc */
 	public $skinname = '2018';
+	/** @inheritDoc */
 	public $template = 'Skin2018Template';
 }
