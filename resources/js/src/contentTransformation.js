@@ -2,16 +2,16 @@
 /* eslint-disable max-len */
 
 /* Permalink clipboard handling */
-$( window ).ready( function () {
+$( () => {
 	var clipboard = new ClipboardJS( '#copy-permalink' );
 
-	clipboard.on( 'success', function () {
+	clipboard.on( 'success', () => {
 		UIkit.tooltip( '#copy-permalink', {
 			title: 'Copied link to clipboard!'
 		} ).show();
 	} );
 
-	clipboard.on( 'error', function ( e ) {
+	clipboard.on( 'error', ( e ) => {
 		$( '#copy-permalink' ).text( e.text );
 	} );
 } );
@@ -19,7 +19,7 @@ $( window ).ready( function () {
 /* Format TOC */
 // TODO: Change font size dynamically to fit smaller viewports
 // TODO: Deal with text overflow / truncation of text
-$( window ).ready( function () {
+$( () => {
 	if ( document.querySelector( '#toc' ) ) {
 		// Article TOC
 		let $toc = $( '#toc' );
@@ -48,7 +48,7 @@ $( window ).ready( function () {
 } );
 
 /* Convert edit links to icons */
-$( window ).ready( function () {
+$( function () {
 	if ( document.querySelector( '.mw-editsection' ) ) {
 		let $editMarkers = $( '.mw-editsection' );
 		$editMarkers.addClass( 'uk-invisible-hover uk-text-middle' );
@@ -62,7 +62,7 @@ $( window ).ready( function () {
 // TODO: Add 'to top' markers to section ends
 
 /* Reformat history pages */
-$( window ).ready( function () {
+$( () => {
 	if ( document.getElementById( 'mw-history-compare' ) ) {
 
 		// Create table
@@ -137,7 +137,7 @@ $( window ).ready( function () {
 } );
 
 /* Shift images to the right */
-$( window ).ready( function () {
+$( () => {
 	let imgs = $( 'main .thumb, main .mermaid' ),
 		prev = $( 'head' );
 
@@ -154,7 +154,7 @@ $( window ).ready( function () {
 } );
 
 /* Preview Wikilinks */
-$( window ).ready( function () {
+$( () => {
 	let own = top.location.host.toString(),
 		mothership = 'en.wikipedia.org',
 
@@ -172,11 +172,11 @@ $( window ).ready( function () {
 			'</div>' );
 	} );
 
-	$wikilinks.mouseenter( function () {
+	$wikilinks.on( 'mouseenter', function () {
 		var caller = $( this ).next();
 
 		$.getJSON( 'https://en.wikipedia.org/api/rest_v1/page/summary/' + $( this )[ 0 ].title )
-			.done( function ( res ) {
+			.done( ( res ) => {
 				caller.find( 'h2' ).html( res.title );
 				if ( res.type !== 'no-extract' ) {
 					caller.find( 'p' ).html( res.extract );
@@ -184,14 +184,14 @@ $( window ).ready( function () {
 					caller.find( 'p' ).html( 'No extract available!' ); // TODO: Add "warning" icon for policy pages, and "info" icon for guideline pages
 				}
 			} )
-			.fail( function ( res, status, err ) {
+			.fail( ( res, status, err ) => {
 				caller.find( 'p' ).html( 'Article not found!<br>Reason: ' + status + ', ' + err );
 			} );
 	} );
 } );
 
 /* Unpoly default configuration */
-$( window ).ready( function () {
+$( () => {
 	up.fragment.config.mainTargets = [
 		'#page-title',
 		'#tools',
