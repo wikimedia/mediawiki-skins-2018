@@ -3,5 +3,4 @@ node_modules/
 dev/
 vendor/
 composer.lock
-tests/phan/issues
 /.eslintcache
