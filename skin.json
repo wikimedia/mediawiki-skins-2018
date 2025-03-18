@@ -11,7 +11,7 @@
 		"MediaWiki": ">= 1.41.0"
 	},
 	"ValidSkinNames": {
-		"s2018": {
+		"2018": {
 			"class": "Skin2018",
 			"args": [
 				{

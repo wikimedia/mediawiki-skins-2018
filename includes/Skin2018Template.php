@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\Html\TemplateParser;
+
 /**
  * BaseTemplate class for the 2018 skin
  *
