@@ -4,3 +4,4 @@ dev/
 vendor/
 composer.lock
 /.eslintcache
+/.stylelintcache
