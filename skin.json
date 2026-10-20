@@ -51,11 +51,11 @@
 		},
 		"skins.2018.js": {
 			"scripts": [
-				"node_modules/unpoly/unpoly.es5.js",
-				"node_modules/uikit/dist/js/uikit.js",
-				"node_modules/uikit/dist/js/uikit-icons.js",
-				"node_modules/clipboard/dist/clipboard.js",
-				"node_modules/mermaid/dist/mermaid.js",
+				"resources/js/lib/unpoly.es5.js",
+				"resources/js/lib/uikit.js",
+				"resources/js/lib/uikit-icons.js",
+				"resources/js/lib/clipboard.js",
+				"resources/js/lib/mermaid.js",
 				"resources/js/dist/contentTransformation.js"
 			]
 		}

@@ -6,7 +6,8 @@
 		"wikimedia/jquery"
 	],
 	"ignorePatterns": [
-		"resources/js/dist"
+		"resources/js/dist",
+		"resources/js/lib/"
 	],
 	"rules": {
 		"no-var": "off",
