@@ -201,4 +201,5 @@ $( () => {
 	];
 	up.link.config.followSelectors.push( 'a[href]' );
 	up.boot();
+	document.body.classList.add( 'skin-2018-uikit-loaded' );
 } );

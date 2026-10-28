@@ -2,6 +2,14 @@
 @import 'lib/unpoly.css';
 @import 'lib/uikit/uikit.theme.less';     // TODO: Check about importing uikit.less instead
 
+body {
+	display: none;
+
+	&.skin-2018-uikit-loaded {
+		display: inherit;
+	}
+}
+
 #top-bar {
 	height: 45px;
 	border-bottom: 1px solid @global-muted-color;
@@ -10,6 +18,7 @@
 	> *,
 	.tool > a {
 		height: 45px;
+		min-height: 45px; // Override UIkit's 80px default (@navbar-nav-item-height) so icons center within this row
 	}
 
 	img {

@@ -12,10 +12,11 @@
 	},
 	"ValidSkinNames": {
 		"2018": {
-			"class": "Skin2018",
+			"class": "SkinTemplate",
 			"args": [
 				{
 					"name": "2018",
+					"template": "Skin2018Template",
 					"responsive": true,
 					"bodyOnly": true,
 					"styles": [
@@ -23,6 +24,14 @@
 					],
 					"scripts": [
 						"skins.2018.js"
+					],
+					"menus": [
+						"associated-pages",
+						"views",
+						"actions",
+						"variants",
+						"user-page",
+						"user-menu"
 					]
 				}
 			]
@@ -65,7 +74,6 @@
 		"remoteSkinPath": "2018"
 	},
 	"AutoloadClasses": {
-		"Skin2018": "includes/Skin2018.php",
 		"Skin2018Template": "includes/Skin2018Template.php"
 	},
 	"manifest_version": 2

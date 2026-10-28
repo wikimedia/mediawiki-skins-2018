@@ -22,20 +22,18 @@ class Skin2018Template extends BaseTemplate {
 			unset( $this->data['content_navigation']['actions']['unwatch'] );
 		}
 
-		// Output <head>
-		$pre139 = version_compare( MW_VERSION, '1.39', '<' );
-		if ( $pre139 ) {
-			echo $this->get( 'headelement' );
-		}
-
+		$this->data['personal_urls_2018'] = array_values(
+				array_merge(
+				$this->data['content_navigation']['user-page'],
+				$this->data['content_navigation']['user-menu']
+			)
+		);
 		// Output <body> using Mustache
 		$templateParser = new TemplateParser( __DIR__ . '/../resources/templates' );
 
-		echo $templateParser->processTemplate(
+		$html = $templateParser->processTemplate(
 			'main', $this->data
 		);
-		if ( $pre139 ) {
-			echo '</body></html>';
-		}
+		echo $html;
 	}
 }

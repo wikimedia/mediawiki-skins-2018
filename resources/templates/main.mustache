@@ -78,12 +78,9 @@
                         <a href="{{{userpageurl}}}" title="{{userpage}}" role="button" aria-haspopup="menu" aria-label="{{userpage}}" uk-icon="icon: user"></a>      {{! TODO: Add notification for new talk page messages (using $data['newtalk']) }}
                         <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav" role="menu">
-                                <li><a href="{{{personal_urls.userpage.href}}}">{{personal_urls.userpage.text}}</a></li>
-                                <li><a href="{{{personal_urls.mytalk.href}}}">{{personal_urls.mytalk.text}}</a></li>
-                                <li><a href="{{{personal_urls.watchlist.href}}}">{{personal_urls.watchlist.text}}</a></li>
-                                <li><a href="{{{personal_urls.mycontris.href}}}">{{personal_urls.mycontris.text}}</a></li>
-                                <li><a href="{{{personal_urls.preferences.href}}}">{{personal_urls.preferences.text}}</a></li>
-                                <li><a href="{{{personal_urls.logout.href}}}">{{personal_urls.logout.text}}</a></li>
+                                {{#personal_urls_2018}}
+                                <li><a href="{{href}}">{{text}}</a></li>
+                                {{/personal_urls_2018}}
                             </ul>
                         </div>
                     </li>
